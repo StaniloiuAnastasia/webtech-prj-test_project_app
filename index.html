@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+
+<html lang="en-GB">
+    <body  background="background.jpg">
+ <link rel="stylesheet" type="text/css" href="style.css">
+
+<div class="OverTheImage">
+    <!--Imaginea propriu-zisa-->
+    <img class="Image" src="book.jpg">
+</body>
+<br>
+<br>
+
+<!--Functia prin care se valideaza datele introduse -->
+<script type="text/javascript">
+function validationLogIn()
+{
+var form=document.forms["LogIn"]["User"].value;
+if (form==null || form=="")
+  {
+  alert("Write your name , please!!!!!!");
+  return false;
+  }
+}
+</script>
+
+    <body  background="background.jpg">
+      <!--Apelarea fucntiei-->
+      <body onLoad="validationLogIn()">
+      <p>LogIn Page</p>
+      
+  <div class="Formular">
+     
+<form name="LogInFormular" action="index_submit" method="get" accept-charset="utf-8">
+  <ul>
+    <li><label for="e-mail">Email:</label>
+    <input class="e-mail" type="e-mail" name="e-mail" placeholder="adress@email.com" required></li>
+    <li><label for="password">Password:</label>
+    <input class="password" type="password" name="password" placeholder="password" required></li>
+    <li>
+    <input class="buttonB" type="button" value="Books" onClick="parent.location='Books.html'"></li>
+    <input class="buttonE" type="button" value="Events" onClick="parent.location='Events.html'"></li>
+  </ul>
+</form>
+
+</div>
+</body>
+
+</body>
+</html>
