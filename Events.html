@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+
+<html lang="en-GB">
+    <link rel="stylesheet" type="text/css" href="styleEvents.css">
+    <body  background="background.jpg">
+    <img class="image" src="events.jpg" ><br>
+    <h1>Proposed events</h1><br>
+    
+    <img class="image1" src="event1.jpg" height="250" width="230">
+    <a href="http://metropotam.ro/evenimente/Istoria-circulatiei-monetare-in-Bucuresti-si-in-imprejurimi-event9233046574/" 
+    class="button1"> Istoria circulatiei montare in Bucuresti si in imprejurimi</a>
+<br>
+<br>
+    <img class="image2" src="event2.jpg" height="250" width="230">
+    <a href="http://www.locurileculturii.ro/category/evenimente/alte-evenimente/" 
+    class="button2"> Expozitie “Suvenir de Iarna” la Elite Art Gallery</a>
+<br>
+<br>  
+    <img class="image3" src="event3.jpg" height="250" width="230">
+    <a href="http://www.dallesrevolution.ro/p14-Targuri" 
+    class="button3">Targ sala Dalles</a>
+    
+    <h2>My events</h2>
+    <!--Tabel cu evenimentele pe care vreau sa mi le retin si adaug in agenda-->
+    <table id="events">
+       <thead>
+           <tr>
+               <th>EventName</th>
+               <th>Link</th>
+           </tr>
+       </thead>
+       <tbody id="tableBody">
+           <tr>
+               <td>Glenn Miller Orchestra</td>
+               <td><a href="http://www.citycompass.ro/events/glenn-miller-orchestra-in-first-time-romania-concert/" class="button">Here</a></td>
+           </tr>
+       </tbody>
+       </table>
+       
+   </table>
+         <br>
+         <br>
+    <form action="#" class="Controale">
+            <label for="EventName">Event name:</label>
+            <input class="name" name="EventName" id="EventNme">
+            <label for="link">Link:</label>
+            <input class="link" name="link" id="link">
+            <input class="button" type="button" name="btnAdd" value="Add Event" onclick="addEvent()">
+        </form>
+        <br>
+        <br>
+        
+         <script type="text/javascript">
+            function addEvent() {
+                
+                var tRow = document.createElement("tr");
+
+                var cEventName = document.createElement("td");
+                if (document.getElementById("EventName").value) {
+                    cEventName.innerHTML = document.getElementById("EventName").value;
+                }
+
+                var cLink = document.createElement("td");
+                if (document.getElementById("link").value) {
+                    cLink.innerHTML = document.getElementById("link").value;
+                }
+
+                tRow.appendChild(cEventName);
+                tRow.appendChild(cLink);
+               
+                var tBody = document.getElementById("tableBody");
+                tBody.appendChild(tRow);
+
+            }        
+        </script>
+    
+    
+    </body>
+    </html>
