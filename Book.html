@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+
+<html lang="en-GB">
+    <body>
+    <link rel="stylesheet" type="text/css" href="styleBooks.css">
+    <img class="image" src="manybooks.jpg" >
+    <!-- Lista principala cu genurile de carti-->
+    <h1>Genre
+        <ul class="List">
+        <li>Fiction</li>
+        <li>Drama</li>
+        <li>Realistic fiction</li>
+        <li>Fantasy</li>
+        </ul>
+    </h1>
+    </body>
+
+</head> 
+<body>
+    <!--Tabel cu carti-->
+   <table id="books">
+       <caption>Fiction</caption>
+       <thead>
+           <tr>
+               <th>Name</th>
+               <th>Author</th>
+               <th>Link</th>
+           </tr>
+       </thead>
+       <tbody id="tableBody">
+           <tr>
+               <td>To Kill a MockingBird</td>
+               <td>Harper Lee</td></td>
+               <td><a href="https://www.pdf-archive.com/2015/09/08/to-kill-a-mockingbird-text/to-kill-a-mockingbird-text.pdf" class="button">Read this book</a></td>
+           </tr>
+           <tr>
+               <td>Dune</td>
+               <td>Frank Herbert</td>
+               <td><a href="http://www.cartipdf.net/carte/descarca-frank-herbert-dune-pdf" class="button">Read this book</a></td>
+           </tr>
+           <tr>
+               <td>Alchimist</td>
+               <td>Paulo Coelho</td>
+               <td><a href="http://www.slideshare.net/catapaula/alchimistul-16482634" class="button">Read this book</a></td>
+           </tr>
+       </tbody>
+       </table>
+       <table id="books">
+  <caption>Drama</caption>
+       <thead>
+           <tr>
+               <th>Name</th>
+               <th>Author</th>
+               <th>Link</th>
+           </tr>
+       </thead>
+       <tbody id="tableBody">
+           <tr>
+               <td>The Crucible</td>
+               <td>Arthur Miller</td></td>
+               <td><a href="https://docs.google.com/file/d/0B9MngeMPanjfNW5jR2l5dXB3bVU/edit" class="button">Read this book</a></td>
+           </tr>
+           <tr>
+               <td>Antigona</td>
+               <td>Sofocle</td>
+               <td><a href="https://www.scribd.com/doc/24835598/Sofocle-Antigona" class="button">Read this book</a></td>
+           </tr>
+           <tr>
+               <td>Henric al V-lea</td>
+               <td>William Shakespeare</td>
+               <td><a href="https://despreopera.files.wordpress.com/2015/02/henric-v.pdf" class="button">Read this book</a></td>
+           </tr>
+       </tbody>
+       </table>
+       <table id="books">
+   <caption>Realistic Fiction</caption>
+ 
+       <thead>
+           <tr>
+               <th>Name</th>
+               <th>Author</th>
+               <th>Link</th>
+           </tr>
+       </thead>
+       <tbody id="tableBody">
+           <tr>
+               <td>If I stay</td>
+               <td>Gayle Forman</td></td>
+               <td><a href="https://www.scribd.com/doc/105744068/Gayle-Forman-If-I-Stay" class="button">Read this book</a></td>
+           </tr>
+           <tr>
+               <td>The Catcher in the Rye</td>
+               <td>J. D. Salinger</td>
+               <td><a href="http://www.pu.if.ua/depart/Inmov/resource/file/samostijna_robota/Catcher_In_The_Rye_-_J_D_Salinger.pdf" class="button">Read this book</a></td>
+           </tr>
+           <tr>
+               <td>Het grote misschien</td>
+               <td>John Green</td>
+               <td><a href="http://2novels.com/242780-looking-for-alaska.html" class="button">Read this book</a></a></td>
+           </tr>
+       </tbody>
+       </table>
+       <table id="books">
+  <caption>Fantasy</caption>
+       <thead>
+           <tr>
+               <th>Name</th>
+               <th>Author</th>
+               <th>Link</th>
+           </tr>
+       </thead>
+       <tbody id="tableBody">
+           <tr>
+               <td>Neverwhere</td>
+               <td>Neil Gaiman</td></td>
+               <td><a href="http://www.pdforigin.net/neverwhere-pdf/" class="button">Read this book</a></td>
+           </tr>
+           <tr>
+               <td>The Eye of the World</td>
+               <td>Robert Jordan</td>
+               <td><a href="http://www.novelok.com/eye-world" class="button">Read this book</a></a></td>
+           </tr>
+           <tr>
+               <td>The lost symbol</td>
+               <td>Dan Brown</td>
+               <td><a href="http://www.slideshare.net/kevin_tct/the-lost-symbol-pdf" class="button">Read this book</a></td>
+           </tr>
+       </tbody>
+       <tfoot>
+                <tr>
+                    <td colspan="3">Number of books: 12</td>
+                </tr>
+            </tfoot>
+   </table>
+   <br>
+   <br>
+   
+   <!-- Label-uri si controale-->
+   <form action="#" class="Controale">
+            <label for="name">Name:</label>
+            <input class="name" name="name" id="name">
+            <label for="author">Author:</label>
+            <input class="author" name="author" id="author">
+            <label for="link">Link:</label>
+            <input class="link" name="link" id="link">
+            <input class="button" type="button" name="btnAdd" value="Add Book" onclick="addBook()">
+        </form>
+  
+  <!-- Functia care permite adaugarea in tabel a unei carti dorite-->
+   <script type="text/javascript">
+            function addBook() {
+                
+                var tRow = document.createElement("tr");
+
+                var cName = document.createElement("td");
+                if (document.getElementById("name").value) {
+                    cName.innerHTML = document.getElementById("name").value;
+                }
+
+                var cAuthor = document.createElement("td");
+                if (document.getElementById("author").value) {
+                    cAuthor.innerHTML = document.getElementById("author").value;
+                }
+
+                var cLink = document.createElement("td");
+                if (document.getElementById("link").value) {
+                    cLink.innerHTML = document.getElementById("link").value;
+                }
+
+                tRow.appendChild(cName);
+                tRow.appendChild(cAuthor);
+                tRow.appendChild(cLink);
+                
+                var tBody = document.getElementById("tableBody");
+                tBody.appendChild(tRow);
+
+                document.getElementsByTagName("tfoot")[0].childNodes[1].childNodes[1].innerHTML =
+                    "Number of books: " + tBody.children.length.toString();
+            }        
+        </script>
+  <br>
+  <br>
+
+</html>
+        
