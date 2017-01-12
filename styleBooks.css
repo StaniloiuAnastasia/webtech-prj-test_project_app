@@ -1,0 +1,91 @@
+#books
+{
+    font-family: bold, Times;
+    width: 100%;
+}
+
+#books td, #books th 
+{
+    border: 3px solid #2d010c;
+}
+
+#books tr:nth-child(even)
+{
+    background-color: #e0dbdf;
+}
+    
+#books tr:hover 
+{
+    background-color: #e0d7de;
+}
+
+#books th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #2d010c;
+    color: white;
+}
+
+ .image
+    {
+    height:500;
+    width:800;
+    float:right;
+    }
+    h1 
+    {
+    float:left;
+    }
+    .List
+    {
+      list-style-type:circle;
+      color:#2d010c;
+      font-family:Times New Roman ;
+    }
+    .name 
+    {
+    color: #dae8f2;
+    padding-left: 10px;
+    margin: 10px;
+    margin-top: 12px;
+    margin-left: 18px;
+    width: 100px;
+    height: 30px;
+    border: 5px solid #2d010c;
+    box-shadow: inset 0 1.5px 3px #d0e7ed,  5px #f5f7f8;
+    }
+    
+    .author 
+    {
+    color: #dae8f2;
+    padding-left: 10px;
+    margin: 10px;
+    margin-top: 12px;
+    margin-left: 18px;
+    width: 100px;
+    height: 30px;
+    border: 5px solid #2d010c;
+    box-shadow: inset 0 1.5px 3px #d0e7ed,  5px #f5f7f8;
+    }
+    
+    .link 
+    {
+    color: #dae8f2;
+    padding-left: 10px;
+    margin: 10px;
+    margin-top: 12px;
+    margin-left: 18px;
+    width: 100px;
+    height: 30px;
+    border: 5px solid #2d010c;
+    box-shadow: inset 0 1.5px 3px #d0e7ed,  5px #f5f7f8;
+    }
+    
+    .button
+    {
+        background-color: #2d010c;
+        color: white;
+        width: 100px;
+        height: 50px;
+    }
